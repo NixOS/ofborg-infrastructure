@@ -665,6 +665,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-unstable-helsinki": {
+      "locked": {
+        "lastModified": 1765389121,
+        "narHash": "sha256-lYBYkPBCsdbfHhrSw4Ac+i6lwS3O2WTFQSjTEI9vouk=",
+        "owner": "helsinki-systems",
+        "repo": "nixpkgs",
+        "rev": "7ea17890e59684c4be74041e7166687e5ee0d04d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "helsinki-systems",
+        "ref": "feat/nix-daemon-firewall",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "ofborg": {
       "inputs": {
         "nixpkgs": [
@@ -732,6 +748,7 @@
         "infra": "infra",
         "nixpkgs": "nixpkgs",
         "nixpkgs-unstable": "nixpkgs-unstable",
+        "nixpkgs-unstable-helsinki": "nixpkgs-unstable-helsinki",
         "ofborg": "ofborg",
         "ofborg-viewer": "ofborg-viewer",
         "sops-nix": "sops-nix_2",
