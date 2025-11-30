@@ -47,7 +47,7 @@
   services.queue-builder-dev = {
     enable = true;
     queueRunnerAddr = "https://queue-runner.staging-hydra.nixos.org";
-    maxJobs = 2;
+    maxJobs = 4;
     supportedFeatures = [ "fod-checker" ];
     mandatoryFeatures = [ "fod-checker" ];
     mtls = {
