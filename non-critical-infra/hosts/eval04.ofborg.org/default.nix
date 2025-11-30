@@ -48,6 +48,8 @@
     enable = true;
     queueRunnerAddr = "https://queue-runner.staging-hydra.nixos.org";
     maxJobs = 2;
+    supportedFeatures = [ "fod-checker" ];
+    mandatoryFeatures = [ "fod-checker" ];
     mtls = {
       serverRootCaCertPath = "${inputs.infra}/non-critical-infra/hosts/staging-hydra/ca.crt";
       clientCertPath = "${./client.crt}";
