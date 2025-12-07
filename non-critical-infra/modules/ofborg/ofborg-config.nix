@@ -85,7 +85,7 @@ in
       build_timeout_seconds = 18000;
       initial_heap_size = "4g";
       remote = "daemon";
-      inherit (pkgs) system;
+      inherit (pkgs.stdenv.hostPlatform) system;
     };
   };
 

@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     # Why?
     flake-parts.url = "github:hercules-ci/flake-parts";
@@ -8,7 +8,7 @@
     flake-utils.url = "github:numtide/flake-utils";
 
     darwin = {
-      url = "github:LnL7/nix-darwin/nix-darwin-25.05";
+      url = "github:LnL7/nix-darwin/nix-darwin-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -33,7 +33,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     infra = {
-      url = "github:helsinki-systems/nixos-infra/upd/fixups_staging";
+      url = "github:nixos/infra";
       inputs = {
         nixpkgs.follows = "nixpkgs";
         nixpkgs-unstable.follows = "nixpkgs-unstable";
