@@ -58,7 +58,7 @@
 
   systemd.services.rabbitmq = {
     stopIfChanged = false;
-    requires = [ "acme-finished-messages.ofborg.org.target" ];
+    requires = [ "acme-messages.ofborg.org.service" ];
     # https://github.com/rabbitmq/rabbitmq-server-release/issues/51
     serviceConfig.SuccessExitStatus = "69";
   };
