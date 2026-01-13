@@ -8,7 +8,7 @@
 let
   cfg = config.services.hydra-queue-builder-v2;
   user = config.users.users.hydra-queue-builder;
-  unstable = import inputs.nixpkgs-unstable { inherit (pkgs) system; };
+  unstable = import inputs.nixpkgs-unstable { inherit (pkgs.stdenv.hostPlatform) system; };
 in
 {
   options = {
@@ -131,7 +131,7 @@ in
       package = lib.mkOption {
         type = lib.types.package;
         default =
-          (pkgs.recurseIntoAttrs (
+          (lib.recurseIntoAttrs (
             pkgs.callPackage "${inputs.infra}/non-critical-infra/packages/hydra-queue-runner" {
               inherit (unstable) nixVersions openssl;
             }
