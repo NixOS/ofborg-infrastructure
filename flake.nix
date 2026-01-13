@@ -7,9 +7,11 @@
     flake-parts.inputs.nixpkgs-lib.follows = "nixpkgs";
     flake-utils.url = "github:numtide/flake-utils";
 
+    oldnixpkgs.url = "github:NixOS/nixpkgs?rev=cc3d2295b642f3d61faaa7335f79e63b5d10996e";
+
     darwin = {
-      url = "github:LnL7/nix-darwin/nix-darwin-25.11";
-      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-darwin/nix-darwin/nix-darwin-25.11";
+      inputs.nixpkgs.follows = "oldnixpkgs";
     };
 
     srvos = {
