@@ -224,7 +224,7 @@ in
       users.hydra-queue-builder = {
         uid = lib.mkDefault 535;
         gid = lib.mkDefault config.users.groups.hydra.gid;
-        home = lib.mkDefault "/var/lib/hydra-queue-builder";
+        home = lib.mkDefault "/private/var/lib/hydra-queue-builder";
         shell = "/bin/bash";
         description = "hydra-queue-builder service user";
       };
