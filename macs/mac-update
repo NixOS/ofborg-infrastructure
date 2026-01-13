@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+PIDS=()
+
+update() {
+	local HOST=${1}
+	local PROFILE=${2}
+	(ssh "$HOST" -- darwin-rebuild switch --flake "github:nixos/ofborg-infrastructure" 2>&1| sed -e "s/^/${HOST} | /") &
+	PIDS+=($!)
+}
+
+update root@mac01.ofborg.org
+update root@mac02.ofborg.org
+update root@mac03.ofborg.org
+update root@mac04.ofborg.org
+update root@mac05.ofborg.org
+
+wait "${PIDS[@]}"

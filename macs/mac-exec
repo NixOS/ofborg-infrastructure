@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+HOSTS=(
+	"root@mac01.ofborg.org"
+	"root@mac02.ofborg.org"
+	"root@mac03.ofborg.org"
+	"root@mac04.ofborg.org"
+	"root@mac05.ofborg.org"
+)
+PIDS=()
+
+for host in "${HOSTS[@]}"; do
+	# shellcheck disable=SC2068
+	(ssh "${host}" -- $@ 2>&1| sed -e "s/^/${host} | /") &
+	PIDS+=($!)
+done
+
+wait "${PIDS[@]}"
