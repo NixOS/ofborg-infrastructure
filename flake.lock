@@ -671,11 +671,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1768288844,
-        "narHash": "sha256-m08J2cgp8HR5S+rT0+FnMjM3FaA1C5iMPJIksIpJBtw=",
+        "lastModified": 1768769339,
+        "narHash": "sha256-hw75iF4scDqNpAs8LLIaEyJpl5B7d3FV0dL8nfCtGZY=",
         "owner": "NixOS",
         "repo": "ofborg",
-        "rev": "78ae6d6e596505e054ef6ea6914ae3e2df797655",
+        "rev": "b0b0a3805a74e9e1357fbbe29a3d4d4d887e0104",
         "type": "github"
       },
       "original": {
