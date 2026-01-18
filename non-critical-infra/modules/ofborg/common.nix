@@ -22,7 +22,7 @@
 
   nixpkgs.overlays = [
     (_self: super: {
-      ofborg = inputs.ofborg.packages.${super.system}.pkg;
+      ofborg = inputs.ofborg.packages.${super.stdenv.hostPlatform.system}.pkg;
     })
   ];
 
