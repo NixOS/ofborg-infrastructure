@@ -6,10 +6,10 @@
 
 {
   imports = [
-    ./module/hydra-queue-builder.nix
+    inputs.infra.inputs.hydra-queue-runner.darwinModules.queue-builder
   ];
 
-  services.hydra-queue-builder-v2 = {
+  services.queue-builder-dev = {
     enable = true;
     queueRunnerAddr = "https://queue-runner.staging-hydra.nixos.org";
     maxJobs = 2;

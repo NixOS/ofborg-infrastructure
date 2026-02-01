@@ -4,7 +4,7 @@
     inputs.srvos.nixosModules.hardware-hetzner-cloud-arm
     ../../modules/ofborg/builder.nix
     ./hardware.nix
-    "${inputs.infra}/non-critical-infra/modules/hydra-queue-builder-v2.nix"
+    inputs.infra.inputs.hydra-queue-runner.nixosModules.queue-builder
   ];
 
   # Bootloader.
@@ -43,7 +43,7 @@
 
   system.stateVersion = "24.11"; # Did you read the comment?
 
-  services.hydra-queue-builder-v2 = {
+  services.queue-builder-dev = {
     enable = true;
     queueRunnerAddr = "https://queue-runner.staging-hydra.nixos.org";
     maxJobs = 2;
