@@ -41,6 +41,7 @@
       "prometheus.tcp.ip" = "::1";
 
       # STOMP for ofborg-viewer
+      "web_stomp.ssl.ip" = "::";
       "web_stomp.ssl.port" = "15673";
       "web_stomp.ssl.cacertfile" = "${
         config.security.acme.certs."messages.ofborg.org".directory
