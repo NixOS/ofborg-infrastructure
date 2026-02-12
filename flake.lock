@@ -473,15 +473,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1769551408,
-        "narHash": "sha256-8FaW2OxI5JVjU8ONvK9rH4xQfDA/MAaI5YXvsFuPyP4=",
+        "lastModified": 1769981687,
+        "narHash": "sha256-RPIu0Bf/xVOBziUJc77BevQPFdKSoYOJkvCEFiJVFWY=",
         "owner": "helsinki-systems",
         "repo": "hydra-queue-runner",
-        "rev": "3d54e589b425fceaf5c59ba61613544e04fc8ff8",
+        "rev": "9a4b91a715c8d3dae7b11383f63ca8b7c5034c78",
         "type": "github"
       },
       "original": {
         "owner": "helsinki-systems",
+        "ref": "feat/fod_v2",
         "repo": "hydra-queue-runner",
         "type": "github"
       }
@@ -513,16 +514,17 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1769818627,
-        "narHash": "sha256-34oYEWcr8pDkkmxHs1HTI0irAlniUeZCkOsOXWD7now=",
-        "owner": "nixos",
-        "repo": "infra",
-        "rev": "03c2c0d024ec64a069d9766556ad7590b426edac",
+        "lastModified": 1769984451,
+        "narHash": "sha256-brwNsEUrQq9ofHpjkqJXxpWO2rZwFYnI2Gc4AV15Sb0=",
+        "owner": "helsinki-systems",
+        "repo": "nixos-infra",
+        "rev": "7799262f1023be0cf535d734da06b0cf2078cb79",
         "type": "github"
       },
       "original": {
-        "owner": "nixos",
-        "repo": "infra",
+        "owner": "helsinki-systems",
+        "ref": "upd/queue-runner",
+        "repo": "nixos-infra",
         "type": "github"
       }
     },

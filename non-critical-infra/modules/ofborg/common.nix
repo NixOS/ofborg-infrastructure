@@ -5,9 +5,28 @@
     "${inputs.infra}/modules/common.nix"
     "${inputs.infra}/non-critical-infra/modules/common.nix"
     ./ofborg-config.nix
+    "${inputs.nixpkgs-unstable}/nixos/modules/services/system/nix-daemon-firewall.nix"
   ];
 
-  nix.gc.automatic = true;
+  nix = {
+    gc.automatic = true;
+    firewall = {
+      enable = true;
+      allowedTCPPorts = [
+        21 # access to ftp files
+        22 # fetchGit
+        34
+        "http"
+        443
+        "30000-31000"
+      ];
+      allowedUDPPorts = [
+        53 # DNS
+        443 # QUIC/HTTP3
+      ];
+    };
+  };
+  networking.nftables.flushRuleset = false;
 
   # TODO wire up exporters
   # TODO loki
