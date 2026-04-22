@@ -33,14 +33,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     infra = {
-      url = "github:nixos/infra";
+      url = "github:Nixos/infra";
       inputs = {
         nixpkgs.follows = "nixpkgs";
         nixpkgs-unstable.follows = "nixpkgs-unstable";
       };
     };
     ofborg = {
-      url = "github:NixOS/ofborg";
+      url = "github:Nixos/ofborg";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     ofborg-viewer = {

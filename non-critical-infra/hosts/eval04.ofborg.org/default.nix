@@ -1,11 +1,11 @@
-{ inputs, config, ... }:
+{ inputs, ... }:
 {
   imports = [
     inputs.srvos.nixosModules.hardware-hetzner-cloud-arm
     ../../modules/ofborg/builder.nix
+    ../../modules/hydra/builder.nix
     # ../../modules/ofborg/evaluator.nix
     ./hardware.nix
-    inputs.infra.inputs.hydra-queue-runner.nixosModules.queue-builder
   ];
 
   # Bootloader.
@@ -44,18 +44,6 @@
 
   system.stateVersion = "24.11"; # Did you read the comment?
 
-  services.queue-builder-dev = {
-    enable = true;
-    queueRunnerAddr = "https://queue-runner.staging-hydra.nixos.org";
-    maxJobs = 2;
-    mtls = {
-      serverRootCaCertPath = "${inputs.infra}/non-critical-infra/hosts/staging-hydra/ca.crt";
-      clientCertPath = "${./client.crt}";
-      clientKeyPath = config.sops.secrets."queue-runner-client.key".path;
-      domainName = "queue-runner.staging-hydra.nixos.org";
-    };
-  };
-
   sops.secrets = {
     "ofborg/builder-rabbitmq-password" = {
       owner = "ofborg-builder";
@@ -65,11 +53,6 @@
     "harmonia/secret" = {
       owner = "harmonia";
       restartUnits = [ "harmonia.service" ];
-      sopsFile = ../../secrets/ofborg.eval04.ofborg.org.yml;
-    };
-    "queue-runner-client.key" = {
-      owner = "hydra-queue-builder";
-      restartUnits = [ "hydra-queue-builder-v2.service" ];
       sopsFile = ../../secrets/ofborg.eval04.ofborg.org.yml;
     };
   };

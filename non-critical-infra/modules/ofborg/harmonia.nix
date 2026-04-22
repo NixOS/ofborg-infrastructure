@@ -21,10 +21,10 @@ let
       substituter = "build02.ofborg.org";
       public-key = "build02.ofborg.org:uw5IBpYv129c8+ltrQ288TGvmE5JqNZA+q7GW3tDaUk=";
     };
-    ofborg-build03 = {
-      substituter = "build03.ofborg.org";
-      public-key = "build03.ofborg.org:8LFTt2s1cbzniV4MLkT30qEHPY0cK3RP+6fk03GD3lw=";
-    };
+    # ofborg-build03 = {
+    #   substituter = "build03.ofborg.org";
+    #   public-key = "build03.ofborg.org:8LFTt2s1cbzniV4MLkT30qEHPY0cK3RP+6fk03GD3lw=";
+    # };
     ofborg-build04 = {
       substituter = "build04.ofborg.org";
       public-key = "build04.ofborg.org:NHEGj8moimu2TiZNIA4DOb4kVhvds6Vlzr2TAwX1mUY=";
