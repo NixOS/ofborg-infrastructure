@@ -435,7 +435,7 @@
           "infra",
           "nix"
         ],
-        "nix-eval-jobs": "nix-eval-jobs",
+        "nix-eval-jobs": "nix-eval-jobs_2",
         "nixpkgs": [
           "infra",
           "nixpkgs"
@@ -458,23 +458,19 @@
     },
     "hydra-staging": {
       "inputs": {
-        "nix": [
-          "infra",
-          "nix"
-        ],
-        "nix-eval-jobs": "nix-eval-jobs_2",
+        "nix": "nix",
+        "nix-eval-jobs": "nix-eval-jobs",
         "nixpkgs": [
-          "infra",
           "nixpkgs"
         ],
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1776329914,
-        "narHash": "sha256-lpGFkec3wFLFwAf/bDJhtdnxmsh4kEYFH9PCZe+8tPE=",
+        "lastModified": 1777994516,
+        "narHash": "sha256-CjLsyC1pHEZjBR+UVAcBwIG3RePGfgv2M+dyUdii3bo=",
         "owner": "NixOS",
         "repo": "hydra",
-        "rev": "168c672f8c4ba7a89dc4e5e2d6e04ee2f8f3fb6a",
+        "rev": "1599a72fe2624cc5bd0eac0062b77a695badcb18",
         "type": "github"
       },
       "original": {
@@ -493,9 +489,11 @@
         "flake-utils": "flake-utils_2",
         "freescout": "freescout",
         "hydra": "hydra",
-        "hydra-staging": "hydra-staging",
+        "hydra-staging": [
+          "hydra-staging"
+        ],
         "nft-prefix-import": "nft-prefix-import",
-        "nix": "nix",
+        "nix": "nix_2",
         "nixos-channel-scripts": "nixos-channel-scripts",
         "nixpkgs": [
           "nixpkgs"
@@ -549,11 +547,11 @@
     "nix": {
       "flake": false,
       "locked": {
-        "lastModified": 1776205241,
-        "narHash": "sha256-7DgRBh7cDTCM6Kkb19b9QE8+7bMuw5jLJpJFRM3JGC4=",
+        "lastModified": 1777325645,
+        "narHash": "sha256-+fPubqkJvJxvynNIkz8NyaAY0DKxgGpxo6idri0ZeoA=",
         "owner": "NixOS",
         "repo": "nix",
-        "rev": "f11bb9b9e45209086e30c1127749da9032460921",
+        "rev": "ee1ce8842a745530036bce2aee52b405c03a00cd",
         "type": "github"
       },
       "original": {
@@ -637,6 +635,23 @@
       "original": {
         "owner": "nix-community",
         "repo": "nix-github-actions",
+        "type": "github"
+      }
+    },
+    "nix_2": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1776205241,
+        "narHash": "sha256-7DgRBh7cDTCM6Kkb19b9QE8+7bMuw5jLJpJFRM3JGC4=",
+        "owner": "NixOS",
+        "repo": "nix",
+        "rev": "f11bb9b9e45209086e30c1127749da9032460921",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "2.34-maintenance",
+        "repo": "nix",
         "type": "github"
       }
     },
@@ -778,6 +793,7 @@
         "disko": "disko",
         "flake-parts": "flake-parts",
         "flake-utils": "flake-utils",
+        "hydra-staging": "hydra-staging",
         "infra": "infra",
         "nixpkgs": "nixpkgs",
         "nixpkgs-unstable": "nixpkgs-unstable",
@@ -942,7 +958,6 @@
     "treefmt-nix": {
       "inputs": {
         "nixpkgs": [
-          "infra",
           "hydra-staging",
           "nixpkgs"
         ]
