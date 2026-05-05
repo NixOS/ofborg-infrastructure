@@ -32,11 +32,16 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hydra-staging = {
+      url = "github:NixOS/hydra";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     infra = {
       url = "github:Nixos/infra";
       inputs = {
         nixpkgs.follows = "nixpkgs";
         nixpkgs-unstable.follows = "nixpkgs-unstable";
+        hydra-staging.follows = "hydra-staging";
       };
     };
     ofborg = {
