@@ -59,7 +59,7 @@
       # which we need for nix-store
       shell = "/bin/zsh";
       # Not part of the infra team
-      openssh.authorizedKeys.keys = (import "${inputs.infra}/ssh-keys.nix").infra ++ [
+      openssh.authorizedKeys.keys = (import "${inputs.infra}/keys.nix").ssh.groups.infra-build ++ [
         # Not part of the infra team
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM35Bq87SBWrEcoDqrZFOXyAmV/PJrSSu3hl3TdVvo4C janne"
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPK/3rYhlIzoPCsPK38PMdK1ivqPaJgUqWwRtmxdKZrO ✏️"
